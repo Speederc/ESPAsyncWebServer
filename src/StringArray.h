@@ -165,7 +165,8 @@ class LinkedList {
         if (_onRemove) {
           _onRemove(it->value());
         }
-        delete it;
+        if(it)      
+          delete it;
       }
       _root = nullptr;
     }
